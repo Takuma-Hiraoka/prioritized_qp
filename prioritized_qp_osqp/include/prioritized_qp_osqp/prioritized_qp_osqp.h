@@ -12,7 +12,7 @@ namespace prioritized_qp_osqp{
       dl <= Cx <= du
      */
   public:
-    // settingsの設定はユーザーが行うこと (initializesolver前にやらないと反省されない)
+    // settingsの設定はユーザーが行うこと (initializesolver前にやらないと反映されない)
     osqp::OsqpSettings& settings() { return settings_; }
 
     virtual bool isInitializeSolverRequired(Eigen::SparseMatrix<double,Eigen::ColMajor>& H,
