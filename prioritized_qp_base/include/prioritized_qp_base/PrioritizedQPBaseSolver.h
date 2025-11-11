@@ -12,6 +12,10 @@ namespace prioritized_qp_base{
       dl <= Cx <= du
      */
   public:
+    Task(){
+      b_.resize(0,1); // Eigenはheader-only library. ここで実体化しておかないと、Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1, 0, -1, 1> >::resize(long, long) (/usr/lib/liborocos-kdl.so.1.4+0x3a0be) がリンクされてしまい、address sanitizerがheap-buffer-overflow した
+    }
+
     std::string name() const { return name_; }
     std::string& name() { return name_; }
 
