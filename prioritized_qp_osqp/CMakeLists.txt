@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(prioritized_qp_osqp)
 
-add_compile_options(-std=c++14 -Wno-unused-result)
+add_compile_options(-std=c++17 -Wno-unused-result)
 set(CMAKE_BUILD_TYPE Release)
 
 find_package(catkin REQUIRED COMPONENTS
